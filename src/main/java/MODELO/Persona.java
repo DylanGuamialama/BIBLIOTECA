@@ -9,31 +9,48 @@ package MODELO;
  * @author guami
  */
 public class Persona {
-    private String nombre;
-    private String apellido;
 
-    public Persona() {
+    private int id;
+    private String cedula;
+    private String nombresCompletos;
+
+    public Persona(int id, String cedula, String nombresCompletos) {
+        this.id = id;
+        this.cedula = cedula;
+        this.nombresCompletos = nombresCompletos;
     }
 
-    public Persona(String nombre, String apellido) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public int getId() {
+        return id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getNombresCompletos() {
+        return nombresCompletos;
     }
 
-    public String getApellido() {
-        return apellido;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
-    
+
+    public void setNombresCompletos(String nombresCompletos) {
+        this.nombresCompletos = nombresCompletos;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", cedula='" + cedula + '\'' +
+                ", nombresCompletos='" + nombresCompletos + '\'' +
+                '}';
+    }
 }
+
